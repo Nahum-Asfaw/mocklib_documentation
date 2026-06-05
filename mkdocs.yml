@@ -1,0 +1,14 @@
+site_name: mocklib
+site_url: https://nahum-asfaw.github.io/mocklib_documentation/ 
+
+theme:
+  name: null
+  custom_dir: 'cinder'
+
+nav:
+- Home: home.md
+- Advanced: advanced.md
+- Structs: structs.md
+- Classes: classes.md
+- References and Acknowledgements: acknowledgements.md
+
