@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+
+    
+    <title>Classes - mocklib</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../css/base.min.css" rel="stylesheet">
+    <link href="../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="..">mocklib</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../home/">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../advanced/">Advanced</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../structs/">Structs</a>
+                    </li>
+                
+                
+                
+                    <li class="active">
+                        <a href="./">Classes</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../acknowledgements/">References and Acknowledgements</a>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../structs/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../acknowledgements/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#classes">Classes</a></li>
+            <li class="second-level"><a href="#map">Map</a></li>
+                
+                <li class="third-level"><a href="#public-methods">Public Methods</a></li>
+                <li class="third-level"><a href="#private-methods">Private Methods</a></li>
+            <li class="second-level"><a href="#globe">Globe</a></li>
+                
+                <li class="third-level"><a href="#public-methods_1">Public Methods</a></li>
+                <li class="third-level"><a href="#private-methods_1">Private Methods</a></li>
+            <li class="second-level"><a href="#gpx">gpx</a></li>
+                
+                <li class="third-level"><a href="#public-methods_2">Public Methods</a></li>
+                <li class="third-level"><a href="#private-methods_2">Private Methods</a></li>
+            <li class="second-level"><a href="#area">Area</a></li>
+                
+                <li class="third-level"><a href="#public-methods_3">Public Methods</a></li>
+                <li class="third-level"><a href="#private-methods_3">Private Methods</a></li>
+            <li class="second-level"><a href="#volume">Volume</a></li>
+                
+                <li class="third-level"><a href="#public-methods_4">Public Methods</a></li>
+                <li class="third-level"><a href="#private-methods_4">Private Methods</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="classes">Classes</h1>
+<p>List of all classes, methods, and elements in <strong>mocklib</strong>.</p>
+<h2 id="map">Map</h2>
+<p>Class to manage horiziontal point information
+for individual points, not creating an area or perimiter.</p>
+<h3 id="public-methods">Public Methods</h3>
+<pre><code>Map()
+</code></pre>
+<p>Empty constructor.<br />
+Has no return value.</p>
+<pre><code>Map.get_distance(horizontal k1, horizontal k2)
+</code></pre>
+<p>Returns <code>int</code> of geographical distance in kilometers between <code>k1</code> and <code>k2</code>, approximating arc distance using tunnel distance.<br />
+Returns <code>-1</code> on error.</p>
+<pre><code>Map.get_long_difference(horizontal k1, horizontal k2)
+</code></pre>
+<p>Returns <code>float</code> of comparison <code>|k1 - k2|</code> of longitude values for <code>k1</code>, <code>k2</code>.<br />
+Returns <code>-1</code> on error.</p>
+<pre><code>Map.get_lad_difference(horizontal k1, horizontal k2)
+</code></pre>
+<p>Returns <code>float</code> of comparison <code>|k1 - k2|</code> of laditude values for <code>k1</code>, <code>k2</code>.<br />
+Returns <code>-1</code> on error.</p>
+<pre><code>Map.get_closest_ocean(horizontal k)
+</code></pre>
+<p>Returns <code>char</code> string sating closest ocean given a reference point <code>k</code>. Ocean points are saved<br />
+as the center of each ocean.<br />
+Returns one of <code>Pacific</code>, <code>Atlantic</code>, <code>Indian</code>, <code>Artic</code>, <code>Antartic</code> on success.<br />
+Returns <code>Error: example error msg</code> on error.</p>
+<pre><code>Map.get_ocean_continent(horizontal k)
+</code></pre>
+<p>Returns <code>char</code> string of Ocean or Continent a reference point <code>k</code> is on.<br />
+Returns one of <code>Pacific</code>, <code>Atlantic</code>, <code>Indian</code>, <code>Artic</code>, <code>Antartic</code>,<br />
+<code>Africa</code>, <code>Asia</code>, <code>Europe</code>, <code>North America</code>, <code>Oceania</code>, <code>South America</code>, <code>Antartica</code> on success.<br />
+Returns <code>Error: example error msg</code> on error.</p>
+<pre><code>Map.dist_to_null_island(horizontal k)
+</code></pre>
+<p>Returns <code>int</code> of geographical distance in kilometers to "Null Island", the point where <code>longitude = 0</code> and<br />
+<code>laditude = 0</code>. Off the coast of Ghana, "Null Island" is an in-joke in GIS applications, it's not an actuall island.<br />
+Returns <code>-1</code> on error.</p>
+<pre><code>Map.write(horizontal k, char *filename)
+</code></pre>
+<p>Append a single <code>horiziontal</code> point <code>k</code> to an xml file of <code>filename</code>. If that file doesn't exist, it will create it.<br />
+Returns <code>Error: example error msg</code> on error.</p>
+<h3 id="private-methods">Private Methods</h3>
+<p>There are no private methods for <code>Map</code>.</p>
+<h2 id="globe">Globe</h2>
+<p>Class to manage geodetic point information
+for individual points not creating a volume.</p>
+<h3 id="public-methods_1">Public Methods</h3>
+<pre><code>Globe()
+</code></pre>
+<p>Empty constructor.<br />
+Has no return value.</p>
+<pre><code>Globe.get_pythag_distance(geodetic k1, geodetic k2)
+</code></pre>
+<p>Returns <code>int</code> of pythagorean distance in kilometers between two geodetic points <code>k1</code>, <code>k2</code>.<br />
+Returns <code>-1</code> on error.</p>
+<pre><code>Globe.get_long_difference(geodetic k1, geodetic k2)
+</code></pre>
+<p>Returns <code>float</code> of comparison <code>|k1 - k2|</code> of longitude values for <code>k1</code>, <code>k2</code>.<br />
+Returns <code>-1</code> on error.</p>
+<pre><code>Globe.get_lad_difference(geodetic k1, geodetic k2)
+</code></pre>
+<p>Returns <code>float</code> of comparison <code>|k1 - k2|</code> of laditude values for <code>k1</code>, <code>k2</code>.<br />
+Returns <code>-1</code> on error.</p>
+<pre><code>Globe.get_elevation_difference(geodetic k1, geodetic k2)
+</code></pre>
+<p>Returns <code>int</code> of comparison <code>|k1 - k2|</code> of elevation values for <code>k1</code>, <code>k2</code>.<br />
+Returns <code>-1</code> on error.</p>
+<pre><code>Globe.get_ocean_continent(geodetic k)
+</code></pre>
+<p>Returns <code>char</code> string of Ocean or Continent a reference point <code>k</code> is on.<br />
+Returns one of <code>Pacific</code>, <code>Atlantic</code>, <code>Indian</code>, <code>Artic</code>, <code>Antartic</code>,<br />
+<code>Africa</code>, <code>Asia</code>, <code>Europe</code>, <code>North America</code>, <code>Oceania</code>, <code>South America</code>, <code>Antartica</code> on success.<br />
+Returns <code>Error: example error msg</code> on error.</p>
+<pre><code>Globe.dist_to_mariana_trench(geodetic k)
+</code></pre>
+<p>Returns <code>int</code> of distance in kilometers from geodetic point <code>k</code> to the bottom of the Mariana Trench.<br />
+returns <code>-1</code> on error.</p>
+<pre><code>Globe.write(geodetic k, char *filename)
+</code></pre>
+<p>Append a single <code>geodetic</code> point <code>k</code> to an xml file of <code>filename</code>. If that file doesn't exist, it will create it.<br />
+Returns <code>Error: example error msg</code> on error.</p>
+<h3 id="private-methods_1">Private Methods</h3>
+<p>There are no private methods for <code>Globe</code>.</p>
+<h2 id="gpx">gpx</h2>
+<p>Class to manage input output operations with GPX (xml) files.</p>
+<h3 id="public-methods_2">Public Methods</h3>
+<pre><code>gpx()
+</code></pre>
+<p>Empty construcor.<br />
+Has no return value.</p>
+<pre><code>gpx.get_info(char *filename)
+</code></pre>
+<p>Read from a GPX (<code>xml</code>) file, return point info as either <code>horizontal</code> or <code>geodetic</code>.<br />
+Returns <code>Error: example error msg</code> on error.</p>
+<pre><code>gpx.write_horiz_to_xml(char *filename, horizontal *array)
+</code></pre>
+<p>Appends to an <code>xml</code> file (or creates one with the given filename if one doesn't exist)<br />
+the horizontal point information <code>array</code> and time of day.<br />
+Returns <code>Error: example error msg</code> on error.</p>
+<pre><code>gpx.write_geodetic_to_xml(char *filename, horizontal *array)
+</code></pre>
+<p>Appends to an <code>xml</code> file (or creates one with the given filename if one doesn't exist)<br />
+the geodetic point information <code>array</code> and time of day.<br />
+Returns <code>Error: example error msg</code> on error.</p>
+<h3 id="private-methods_2">Private Methods</h3>
+<p>There are no private methods for <code>GPX</code>.</p>
+<h2 id="area">Area</h2>
+<p>Class to manage array of horizontal point values that create an area.</p>
+<h3 id="public-methods_3">Public Methods</h3>
+<pre><code>Area(horizontal *new_array)
+</code></pre>
+<p>Constructor. Takes type <code>horizontal *</code> for <code>new array</code>, setting <code>array</code> and calculating <code>area</code> and <code>perim</code>.<br />
+Has no return value.</p>
+<pre><code>Area.add_horiz_point(horizontal k)
+</code></pre>
+<p>Appends horizontal point <code>k</code> to the <code>array</code>. Updates <code>area</code> and <code>perim</code> according to the new <code>array</code>.<br />
+Returns <code>Error: example error msg</code> on error.</p>
+<pre><code>Area.return_perim()
+</code></pre>
+<p>Returns <code>int</code> value <code>perim</code> representing the perimiter (path) in kilometers bounded by the points in <code>array</code>.<br />
+Returns <code>-1</code> on error.</p>
+<pre><code>Area.return_area()
+</code></pre>
+<p>Returns <code>int</code> value <code>area</code> representing the area in kilometers squared bounded by the points in <code>array</code>.<br />
+Returns <code>-1</code> on error.</p>
+<pre><code>Area.return_array()
+</code></pre>
+<p>Returns array of <code>horizontal *</code> type.<br />
+Returns <code>Error: example error msg</code> on error.</p>
+<pre><code>Area.is_point_inside(horizontal k)
+</code></pre>
+<p>Returns <code>bool</code>, checks whether a given <code>horizontal</code> point <code>k</code> is bounded within the points<br />
+in <code>array</code>. Returns <code>true</code> if <code>k</code> is inside the area, <code>false</code> if not.<br />
+Returns <code>false</code> on error.</p>
+<pre><code>Area.write(char *filename)
+</code></pre>
+<p>Appends array (list) of horizontal point information to <code>xml</code> file of a given <code>filename</code>. Will create an <code>xml</code> file of <code>filename</code> if that file is not found.<br />
+Returns <code>Error: example error msg</code> on error.</p>
+<pre><code>Area.new_array(horizontal *new_array)
+</code></pre>
+<p>Takes new <code>horizontal *</code> type array given as <code>new_array</code> and recalculates <code>area</code>, <code>perim</code>.<br />
+Returns <code>Error: example error msg</code> on error.</p>
+<h3 id="private-methods_3">Private Methods</h3>
+<pre><code>horizontal *array;
+int area;
+int perim;
+</code></pre>
+<p>Makes <code>array</code> to hold an array of horizontal point values, <code>area</code> to hold area in kilometers squared of the space bounded by <code>array</code>, and <code>perim</code> to hold the length in kilometers of the path of connected points in <code>array</code>.</p>
+<h2 id="volume">Volume</h2>
+<p>Class to manage array of geodetic point values that create a volume.</p>
+<h3 id="public-methods_4">Public Methods</h3>
+<pre><code>Volume(geodetic *new_array)
+</code></pre>
+<p>Constructor. Takes type <code>geodetic *</code> for <code>new_array</code>, setting <code>array</code> and calculating <code>area</code>, <code>perim</code>, and <code>volume</code>.<br />
+Has no return value.</p>
+<pre><code>Volume.add_geodetic_point(geodetic k)
+</code></pre>
+<p>Appends horizontal point <code>k</code> to the <code>array</code>. Updates <code>area</code>, <code>perim</code> and <code>volume</code> according to the new <code>array</code>.<br />
+Returns <code>Error: example error msg</code> on error.</p>
+<pre><code>Volume.return_perim()
+</code></pre>
+<p>Returns <code>int</code> value <code>perim</code> representing the perimiter (path) in kilometers bounded by the points.<br />
+Returns <code>-1</code> on error.</p>
+<pre><code>Volume.return_area()
+</code></pre>
+<p>Returns <code>int</code> value <code>area</code> representing the area in kilometers squared bounded by the points in <code>geodetic *</code> array, ignoring elevation values.<br />
+Returns <code>-1</code> on error.</p>
+<pre><code>Volume.return_volume()
+</code></pre>
+<p>Returns <code>int</code> value representing in kilometers squared the volume bounded by the points in <code>geodetic *</code> array.<br />
+Returns <code>-1</code> on error.</p>
+<pre><code>Volume.return_array()
+</code></pre>
+<p>Returns array of type <code>geodetic *</code>.<br />
+Returns <code>Error: example error msg</code> on error.</p>
+<pre><code>Volume.is_point_inside(geodetic k)
+</code></pre>
+<p>Returns <code>bool</code>, checks if geodetic point <code>k</code> is inside the volume bounded by the points in <code>array</code>. Returns <code>true</code> if <code>k</code> is inside the volume, <code>false</code> if not.<br />
+Returns <code>false</code> on error.</p>
+<pre><code>Volume.return_avg_elevation()
+</code></pre>
+<p>Returns <code>int</code> representing in kilometers the average elevation of the volume bounded in the <code>geodetic *</code> array.<br />
+Returns <code>-1</code> on error.</p>
+<pre><code>Volume.write(char *filename)
+</code></pre>
+<p>Appends array (list) of geodetic point information to <code>xml</code> file of a given <code>filename</code>. Will create an <code>xml</code> file of <code>filename</code> if that file is not found.<br />
+Returns <code>Error: example error msg</code> on error.</p>
+<pre><code>Globe.new_array(geodetic *new_array)
+</code></pre>
+<p>Takes new <code>geodetic *</code> type array given as <code>new_array</code> and recalculates <code>area</code>, <code>perim</code>, and <code>volume</code>.<br />
+Returns <code>Error: example error msg</code> on error.</p>
+<h3 id="private-methods_4">Private Methods</h3>
+<pre><code>geodetic *array;
+int area;
+int perim;
+int volume;
+</code></pre>
+<p>Makes <code>array</code> to hold an array of geodetic point values, <code>area</code> to hold area in kilometers squared of the space bounded by <code>array</code>, <code>perim</code> to hold the length in kilometers of the path of connected points in <code>array</code>, and <code>volume</code> to hold the volume in kilometers cubed. </p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = ".."</script>
+    
+    <script src="../js/base.js"></script>
+    <script src="../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
